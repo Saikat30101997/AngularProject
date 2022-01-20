@@ -1,78 +1,129 @@
-body{
-  padding: 50px;
-  font-family: 'Roboto', sans-serif;
-  background-color: #F5F5F5;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/*Sign In Form*/
-.signin{
-  position: relative;
-  height: 700px;
-  width: 500px;
-  margin: auto;
-  box-shadow: 0px 30px 125px -5px #000;}
-/*Background Img*/
-.back-img{
+body {
+  background: url('https://raw.githubusercontent.com/codeSTACKr/login-form/master/img/bg.jpg') no-repeat center;
+  background-size: cover;
+  font-family: sans-serif;
+}
+.login-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-left: 200px;
+}
+.form {
   position: relative;
   width: 100%;
-  height: 250px;
-  background: url('https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F1662159%2Fpexels-photo-1662159.jpeg%3Fauto%3Dcompress%26cs%3Dtinysrgb%26dpr%3D1%26w%3D500&imgrefurl=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fbuilding%2F&tbnid=QuP4Ap2o-pTc3M&vet=12ahUKEwi6hv6Fx771AhXkitgFHR0_AK8QMygBegUIARDiAQ..i&docid=Y4TD8shtRwMuGM&w=500&h=625&itg=1&q=building%20background%20image&ved=2ahUKEwi6hv6Fx771AhXkitgFHR0_AK8QMygBegUIARDiAQ')no-repeat   center center;
-background-size: cover;
-}
-.layer {
-    background-color: rgba(33,150,243,0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.active{
-  padding-left: 25px;
+  max-width: 380px;
+  padding: 80px 40px 40px;
+  background: rgba(0,0,0,0.7);
+  border-radius: 10px;
   color: #fff;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.5);
 }
-.nonactive {
-  color: rgba(255, 255, 255, 0.6);
-}
-.sign-in-text{
-  top: 175px;
+.form::before {
+  content:'';
   position: absolute;
-  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255, 0.08);
+  transform: skewX(-26deg);
+  transform-origin: bottom left;
+  border-radius: 10px;
+  pointer-events: none;
 }
-h2 {
-  padding-left: 15px;
-  font-size: 25px;
+.form img {
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+  width: 100px;
+  background: rgba(255,255,255, 0.8);
+  border-radius: 50%;
+}
+.form h2 {
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  color: #ff652f;
+}
+.form .input-group {
+  position: relative;
+}
+.form .input-group input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+}
+.form .input-group label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: .3s ease-out;
+}
+.form .input-group input:focus + label,
+.form .input-group input:valid + label {
+  transform: translateY(-18px);
+  color: #ff652f;
+  font-size: .8rem;
+}
+.submit-btn {
+  display: block;
+  margin-left: auto;
+  border: none;
+  outline: none;
+  background: #ff652f;
+  font-size: 1rem;
   text-transform: uppercase;
-  display: inline-block;
-  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
-.point{
-  position: absolute;
-  z-index: 1;
-  color: #fff;
-  top: 235px;
-  padding-left: 50px;
-  font-size: 20px;
+.forgot-pw {
+  color: inherit;
 }
 
-/*form-section*/
-.form-section{
-  padding: 70px 90px 70px 90px;
+#forgot-pw {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  z-index: 1;
+  background: #fff;
+  opacity: 0;
+  transition: 0.6s;
 }
-.keep-text{
-  font-size: 15px;
-  color: #BDBDBD;
+#forgot-pw:target {
+  height: 100%;
+  opacity: 1;
 }
-.forgot-text{
-  font-size: 12px;
-  color: #BDBDBD;
-  text-align: right;
-}
-/*sign-in-btn*/
-.sign-in-btn{
-  width: 100%;
-  height: 75px;
-  position:absolute;
-  bottom:0;
-  border-radius: 0px;
-  background-color: rgba(63, 78, 191, 1);
+.close {
+  position: absolute;
+  right: 1.5rem;
+  top: 0.5rem;
+  font-size: 2rem;
+  font-weight: 900;
+  text-decoration: none;
+  color: inherit;
 }
