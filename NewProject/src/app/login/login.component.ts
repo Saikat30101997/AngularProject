@@ -2,7 +2,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { filter, Subject, take, takeUntil } from 'rxjs';
-import { MatCard } from '@angular/material/card';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
