@@ -29,8 +29,12 @@ export class LoginComponent implements OnInit {
     this._destroySub$.next();
   }
 
-  public onSubmit(): void {
-    this.loginValid = true;
+  login(){ debugger
+    console.log("Hello");
   }
 
+  public onSubmit(): void { 
+    debugger
+    this.loginValid = true;
+  }
 }

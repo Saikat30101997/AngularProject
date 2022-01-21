@@ -20,11 +20,13 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { TableComponent } from './table/table.component';
+import { AddformComponent } from './addform/addform.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TableComponent
+    TableComponent,
+    AddformComponent
   ],
   imports: [
     BrowserModule,
